@@ -1,0 +1,2 @@
+'use client';
+export default function FormInput({label,error,className='',...props}){return(<div className={`flex flex-col gap-2 ${className}`}>{label?<label className='text-white/80 text-sm'>{label}</label>:null}<input className='w-full bg-[color:var(--card)] border border-white/10 rounded-2xl px-4 py-3 placeholder-white/40' {...props}/>{error?<p className='text-red-400 text-sm'>{error}</p>:null}</div>)}

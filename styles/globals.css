@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--bg:#000;--card:#141414}
+html,body{height:100%}
+body{background:var(--bg);color:#fff}
+.container{margin:0 auto;max-width:28rem;padding:0 1.25rem}
+.card{border-radius:1rem;background:var(--card);border:1px solid rgba(255,255,255,.1)}
