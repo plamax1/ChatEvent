@@ -1,10 +1,11 @@
 import EventCard from "@/components/EventCard";
-import { getEvents } from "@/services/api";
+import { getEvents, getEventUsers } from "@/services/api";
 import BottomNav from "@/components/BottomNav";
 
 export default async function Events() {
+  const userID = 1;
   const events = await getEvents();
-
+  //const events = await getEventUsers(userID);
   return (
     <main className="relative flex flex-col items-center justify-between min-h-screen bg-black text-white">
       {/* Titolo in alto a sinistra */}
