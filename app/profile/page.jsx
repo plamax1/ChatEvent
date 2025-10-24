@@ -1,4 +1,5 @@
 import { getUser } from '@/services/api';
+import LogoutButton from '@/components/LogoutButton';
 
 export default async function Profile() {
   const me = await getUser('me');
@@ -38,12 +39,7 @@ export default async function Profile() {
         </section>
       </div>
 
-              <button
-          type="button"
-          className="w-full mt-10 rounded-2xl bg-[color:var(--card)] border border-white/10 py-3 text-red-400"
-        >
-          Esci
-        </button>
+        <LogoutButton />
     </main>
   );
 }

@@ -2,9 +2,11 @@ import { getEvent, getEventUsers } from "@/services/api";
 import Link from "next/link";
 
 
-export default async function EventDetail({ params }) {
-  const event = await getEvent(params.id);
-  const users = await getEventUsers(params.id);
+export default async function EventDetail({ params }) { //L'id è l'id dell'evento
+  const event = await getEventMock(params.id);
+  const users = await getEventUsersMock(params.id);
+  const event_ = await getEvent(params.id);
+  const users_ = await getEventUsers(params.id);
 
   return (
     <main className="min-h-screen bg-black text-white">
